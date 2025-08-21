@@ -57,8 +57,8 @@
         }
         
         .navbar-brand img {
-            height: 40px;
-            width: auto;
+            /* height: 40px;
+            width: auto; */
         }
         
         .navbar-nav .nav-link {
@@ -425,16 +425,46 @@
             .service-card, .work-step {
                 margin-bottom: 2rem;
             }
+            
         }
+        .company-name {
+            font-family: 'Alice', serif;
+            font-size: 20px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #4f9cf9 0%, #00d4ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tagline {
+            font-size: 12px;
+            color: #00ffff;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        /* disaper part  */
+        .hero-section-content {
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+
+        .hero-hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        
     </style>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-lg ">
         <div class="container">
             <a class="navbar-brand" href="#home">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='40' font-family='Alice, serif' font-size='28' font-weight='bold' fill='%2300ff88'%3EDevNexus%3C/text%3E%3C/svg%3E" alt="DevNexus Logo">
+                <img src="logo2.png" alt="DevNexus Logo" style="width: auto; height: 60px;">
             </a>
+            <div class="logo-text">
+                <div class="company-name">DevNexus</div>
+                <div class="tagline">Your Partner in Digital Growth</div>
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
             </button>
@@ -443,7 +473,7 @@
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -454,7 +484,7 @@
     <section id="home" class="hero-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-12 hero-section-content">
                     <h1 class="hero-title fade-in-up">Bring your business into digital world</h1>
                     <p class="hero-subtitle fade-in-up" style="animation-delay: 0.3s;">Transform your ideas into powerful digital solutions</p>
                     <a href="#contact" class="btn btn-custom fade-in-up" style="animation-delay: 0.6s;">Get Started Today</a>
@@ -509,7 +539,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div data-aos="fade-left">
-                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                        <img src="why.png" 
                              alt="Team collaboration" class="illustration-img">
                     </div>
                 </div>
@@ -632,32 +662,42 @@
             <h2 class="section-title" data-aos="fade-up">Our Projects</h2>
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="project-card slide-in-right" onclick="window.open('https://example.com', '_blank')">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2015&q=80" 
+                    <div class="project-card slide-in-right" onclick="window.open('https://buddhikaashen.github.io/salon', '_blank')">
+                        <img src="p1.png" 
                              alt="E-commerce Platform" class="project-image">
+                        <div class="project-overlay">
+                            <h4 class="project-title">Salon website</h4>
+                            <p class="project-description">A modern salon website with an elegant design, showcasing services, pricing, and booking options to give customers a smooth and professional online experience.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card slide-in-right" style="animation-delay: 0.2s;" onclick="window.open('https://buddhikaashen.github.io/Echonix', '_blank')">
+                        <img src="p2.png" 
+                             alt="Business Dashboard" class="project-image">
+                        <div class="project-overlay">
+                            <h4 class="project-title">IT Company</h4>
+                            <p class="project-description">A professional cybersecurity company website designed to highlight services, showcase expertise, and build trust with clients through a clean and modern user experience.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card slide-in-right" style="animation-delay: 0.4s;" onclick="window.open('https://buddhikaashen.github.io/Green', '_blank')">
+                        <img src="p3.png" 
+                             alt="Restaurant Website" class="project-image">
+                        <div class="project-overlay">
+                            <h4 class="project-title">Hostel Booking Platform</h4>
+                            <p class="project-description">A user-friendly website for room reservations, facilities, and guest management.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card slide-in-right" style="animation-delay: 0.2s;" onclick="window.open('https://rathna.free.nf/', '_blank')">
+                        <img src="p4.png" 
+                             alt="Business Dashboard" class="project-image">
                         <div class="project-overlay">
                             <h4 class="project-title">E-commerce Platform</h4>
                             <p class="project-description">Modern online store with advanced features and seamless user experience.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="project-card slide-in-right" style="animation-delay: 0.2s;" onclick="window.open('https://example.com', '_blank')">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                             alt="Business Dashboard" class="project-image">
-                        <div class="project-overlay">
-                            <h4 class="project-title">Business Dashboard</h4>
-                            <p class="project-description">Comprehensive analytics dashboard for business intelligence and reporting.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="project-card slide-in-right" style="animation-delay: 0.4s;" onclick="window.open('https://example.com', '_blank')">
-                        <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" 
-                             alt="Restaurant Website" class="project-image">
-                        <div class="project-overlay">
-                            <h4 class="project-title">Restaurant Website</h4>
-                            <p class="project-description">Beautiful restaurant website with online ordering and reservation system.</p>
                         </div>
                     </div>
                 </div>
@@ -694,7 +734,7 @@
                             </div>
                             <div>
                                 <h5>Location</h5>
-                                <p style="color: var(--text-gray);">Negombo, Western Province, Sri Lanka</p>
+                                <p style="color: var(--text-gray);">Devnexus, Dolahena Govijanapadaya Road, Sri Lanka</p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -703,7 +743,7 @@
                             </div>
                             <div>
                                 <h5>Email</h5>
-                                <p style="color: var(--text-gray);">info@devnexus.com</p>
+                                <p style="color: var(--text-gray);">devnexus.contact@gmail.com</p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -712,7 +752,7 @@
                             </div>
                             <div>
                                 <h5>Phone</h5>
-                                <p style="color: var(--text-gray);">+94 70 123 4567</p>
+                                <p style="color: var(--text-gray);">+94 77 570 6568</p>
                             </div>
                         </div>
                     </div>
@@ -733,7 +773,7 @@
                         We bring your vision to life with cutting-edge technology.
                     </p>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.facebook.com/share/1A7TAcnLkv/?mibextid=wwXIfr"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -765,7 +805,7 @@
                         <a href="mailto:info@devnexus.com">
                             <i class="fas fa-envelope me-2"></i>info@devnexus.com
                         </a>
-                        <a href="tel:+94701234567">
+                        <a href="tel:+94775706568">
                             <i class="fas fa-phone me-2"></i>+94 70 123 4567
                         </a>
                         <a href="#">
@@ -775,7 +815,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2024 DevNexus. All rights reserved. Designed with ❤️ for your success.</p>
+                <p>&copy; 2024 DevNexus. All rights reserved. | Privacy Policy | Terms of Service </p>
             </div>
         </div>
     </footer>
@@ -862,21 +902,24 @@
             e.preventDefault();
             
             // Get form data
-            const formData = new FormData(this);
-            const name = this.querySelector('input[type="text"]').value;
-            const email = this.querySelector('input[type="email"]').value;
-            const message = this.querySelector('textarea').value;
+            const name = this.querySelector('input[type="text"]').value.trim();
+            const email = this.querySelector('input[type="email"]').value.trim();
+            const message = this.querySelector('textarea').value.trim();
             
             // Simple validation
             if (name && email && message) {
-                // Show success message
-                alert('Thank you for your message! We will get back to you soon.');
+                const phoneNumber = "94787556494"; // WhatsApp number
+                const text = `Hi, I'm ${name},\n\n${message}\n\nEmail: ${email}`;
+                const encodedText = encodeURIComponent(text);
+
+                // Open WhatsApp
+                window.open(`https://wa.me/${phoneNumber}?text=${encodedText}`, "_blank");
+
                 this.reset();
             } else {
                 alert('Please fill in all fields.');
             }
         });
-
         // Project card animations on scroll
         const projectCards = document.querySelectorAll('.project-card');
         const projectObserver = new IntersectionObserver((entries) => {
@@ -997,6 +1040,28 @@
             
             progressBar.style.width = scrollPercent + '%';
         });
+
+
+        // disapear part 
+
+        document.addEventListener("DOMContentLoaded", function () {
+        const hero = document.querySelector(".hero-section-content");
+        const stats = document.querySelector(".stats-section");
+
+        const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+            // When stats section appears, hide hero
+            hero.classList.add("hero-hidden");
+            } else {
+            // When stats section goes out of view, show hero again
+            hero.classList.remove("hero-hidden");
+            }
+        });
+        }, { threshold: 0.3 }); // trigger when 30% of stats is visible
+
+        observer.observe(stats);
+    });
     </script>
 </body>
 </html>
